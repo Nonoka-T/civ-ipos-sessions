@@ -1,10 +1,13 @@
 # a basic import
-
+#import greeter
+#import greeter as g
+from src.greeter import greet
 
 def greet(name):
     print(name)
 
 def main():
+    g()
     # gt('John')
     # student = ""
 
