@@ -12,13 +12,14 @@ class TestOrganisation(unittest.TestCase):
     # Step 3
     def test_add_contact(self):
         # Create an organisation
+        org = Organisation("NMTafe")
 
         # Create a contact
-
+        contact = Contact("Nonoka T", "john@exmple.com")
         # Add contact to organisation
-
+        org.add_contact(contact)
         # Check if contact is added to the organisation
-
+        self.assertIn(contact, org.get_contacts)
 
 if __name__ == '__main__':
     unittest.main()
