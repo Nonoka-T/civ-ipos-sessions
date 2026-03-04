@@ -1,25 +1,30 @@
 # a basic import
-
-# use an alias - consider why might we do this?
-
-# sometimes we only want to import what we need
-
-# create a calculator class in the module
+#import greeter
+#import greeter as g
+from src.greeter import greet
 
 def greet(name):
     print(name)
 
 def main():
-    pass
-    # greet("John")
+    g()
     # gt('John')
     # student = ""
 
-print(greet)
 
-# if __name__ == '__main__':
-#     main()
+if __name__ == '__main__':
+    main()
 
 
+# print(greet)
+# use an alias - consider why might we do this?
+    
+    # def mergeUnits(self ,newUnits, oldUnits):
+
+# sometimes we only want to import what we need
+
+# create a calculator class in the module
+
+# use the new class to return a score to a user
 
 

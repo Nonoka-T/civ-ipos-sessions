@@ -1,9 +1,15 @@
 '''Considering reuse (modularisation)
 when creating python programs'''
+
+
 def greet(name):
     print(f"Hello, {name}")
 
+def main():
+    greet()
+
 # create a calculator class and re-use this by instantiating it in the main.py
+class calculator:
 
 # So as not to contaminate your global namespace, it is good practice to use a main function.
 
@@ -16,3 +22,7 @@ def greet(name):
     # only called when a script
 
 # greet('John')
+if __name__ == '__main__':
+    main()
+class calculator(calculator):
+    def multiply(self,a,b):
