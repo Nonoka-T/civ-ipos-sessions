@@ -6,6 +6,8 @@ from src.contact import Contact
 class TestOrganisation(unittest.TestCase):
     def test_add_organisation(self):
         # Create an organization
+        org = Organisation("NMTafe")
+        self.assertEqual(org.name, "NMTafe")
 
     # Step 3
     def test_add_contact(self):
