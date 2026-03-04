@@ -1,3 +1,4 @@
+import contact
 from src.organisation import Organisation
 
 class Project:
@@ -9,7 +10,7 @@ class Project:
 # add contacts
 
     def add_contact(self, contact):
-    self.contact
+        self.contacts.append(contact)
 
 # Challenge - For a contact to be added to a
 # project it must already exist in the organisation
