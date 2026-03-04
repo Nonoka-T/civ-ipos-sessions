@@ -35,6 +35,8 @@ class TestProject(unittest.TestCase):
         # added to an organisation and can also be added to a project
         self.assertIn(contact, project.contacts)
 
+
+
         # Challenge test that you can add a contact to an organisation
         # and a project using the project class
 
