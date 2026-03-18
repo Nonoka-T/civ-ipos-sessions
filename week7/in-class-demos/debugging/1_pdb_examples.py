@@ -1,9 +1,9 @@
 # example 1
-# filename = __file__
-# import pdb; pdb.set_trace()
-# breakpoint()L
+filename = __file__
+import pdb; pdb.set_trace()
+breakpoint()
 
-# print(f'path = {filename}')
+print(f'path = {filename}')
 
 
 # #example 2
@@ -13,20 +13,19 @@
 # n: Move to the next line in the current function.
 # r (return): Continue execution until the current function returns.
 
-# import os
+import os
 # import pdb; pdb.set_trace()
 
-# def get_path(file_name):
-#     """Return file's path or empty string if no path."""
-#     breakpoint()
-#     head, tail = os.path.split(file_name)
+def get_path(file_name):
+     """Return file's path or empty string if no path."""
+    breakpoint()
+    head, tail = os.path.split(file_name)
 
 
-#     return head
+    return head
 
-
-# filename = __file__
-# print(f'path = {get_path(filename)}')
+filename = __file__
+print(f'path = {get_path(filename)}')
 
 # # example 3
 # n: Step to the next line in the current scope.
