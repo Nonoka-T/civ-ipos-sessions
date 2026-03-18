@@ -1,9 +1,9 @@
+import pdb;
 # example 1
-filename = __file__
-import pdb; pdb.set_trace()
-breakpoint()
+# filename = __file__
+# breakpoint()
 
-print(f'path = {filename}')
+# print(f'path = {filename}')
 
 
 # #example 2
@@ -13,19 +13,19 @@ print(f'path = {filename}')
 # n: Move to the next line in the current function.
 # r (return): Continue execution until the current function returns.
 
-import os
-# import pdb; pdb.set_trace()
+# import os
 
-def get_path(file_name):
-     """Return file's path or empty string if no path."""
-    breakpoint()
-    head, tail = os.path.split(file_name)
+# def get_path(file_name):
+#     """Return file's path or empty string if no path."""
+#     breakpoint()
+#     head, tail = os.path.split(file_name)
 
 
-    return head
+#     return head
 
-filename = __file__
-print(f'path = {get_path(filename)}')
+
+# filename = __file__
+# print(f'path = {get_path(filename)}')
 
 # # example 3
 # n: Step to the next line in the current scope.
@@ -43,7 +43,6 @@ print(f'path = {get_path(filename)}')
 #     return head
 #
 #q
-# import pdb; pdb.set_trace()
 # filename = __file__
 # filename_path = get_path(filename)
 # print(f'path = {filename_path}')
@@ -56,7 +55,7 @@ print(f'path = {get_path(filename)}')
 # w: check the stack
 # b: set a breakpoint
 # Use up & down
-import pdb;
+
 def function_a(first_number, second_number):
     result_of_addition = first_number + second_number
     print(f"In function_a: first_number = {first_number}, second_number = {second_number}, result_of_addition = {result_of_addition}")
