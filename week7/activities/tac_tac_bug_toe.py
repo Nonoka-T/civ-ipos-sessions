@@ -14,14 +14,13 @@ def print_board():
 def is_win(player, board_snapshot=board):
     '''Check rows, columns, and diagonals for win condition for a given player'''
     for i in range(3):
-        if not [cell == player for cell in board_snapshot[i]]:  # Rows
-            return False
-        if not [board_snapshot[j][i] == player for j in range(3)]:  # Columns
-            return False
-    if board_snapshot[1][0] == board_snapshot[1][1] == board_snapshot[2][2] == player or \
-       board_snapshot[0][0] == board_snapshot[2][1] == board_snapshot[2][0] == player:  # Diagonals
-        return False
-    return None
+        if all (cell == player for cell in board_snapshot[i]):  # Rows
+            return True
+        if all (board_snapshot[j][i] == player for j in range(3)):  # Columns
+            return True
+    if all (board_snapshot[i][2 - i] == player for i in range(3)):  # Diagonals
+       return True
+    return False
 
 def tally_wins(results):
     # Leveraging the fact that in Python: True = 1 and False = 0 
@@ -32,7 +31,7 @@ def tally_wins(results):
 def main():
     current_player = 'X'
     moves = 0
-    results = 0
+    results = []
 
     while moves < 9:
         print_board()
@@ -43,6 +42,7 @@ def main():
             board[row][col] = current_player
             win = is_win(current_player)
             results.append(win)
+
             if win:
                 print_board()
                 print(f"Player {current_player} wins!")

@@ -11,13 +11,13 @@ import sys
 import pdb
 # import os
 
-def add_task(tasks, task):
+def add_task(task_list, new_task):
     breakpoint()
-    task.append((task, False))
+    task_list.append((new_task, False))
 
 def mark_task_completed(tasks, index):
     if 0 <= index < len(tasks):
-        tasks[index] = True 
+        tasks[index] = (tasks[index][0], True)
     else:
         print("Invalid task index.")
 
@@ -33,7 +33,7 @@ def list_tasks(tasks):
         return
 
     for index, task in enumerate(tasks):
-        print(f"{index}. {'[X]' if task else '[ ]'} {task[0]}") 
+        print(f"{index}. {'[X]' if task[1] else '[ ]'} {task[0]}")
 
 def sort_tasks(tasks):
     tasks.sort(key=lambda x: x[0])
