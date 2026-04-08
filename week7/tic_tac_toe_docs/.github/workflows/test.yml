@@ -1,0 +1,27 @@
+name: Python Tests with Coverage
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install coverage
+        run: pip install coverage
+
+      - name: Run tests with coverage
+        run: |
+          cd week7/activities
+          coverage run -m unittest test_tac_tac_bug_toe.py
+          coverage report -m

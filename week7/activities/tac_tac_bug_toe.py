@@ -27,8 +27,11 @@ def is_win(player, board_snapshot=board):
             return True
         if all (board_snapshot[j][i] == player for j in range(3)):  # Columns
             return True
+
     if all (board_snapshot[i][2 - i] == player for i in range(3)):  # Diagonals
-       return True
+        return True
+    if all (board_snapshot[i][i] == player for i in range(3)):
+        return True
     return False
 
 def tally_wins(results):
