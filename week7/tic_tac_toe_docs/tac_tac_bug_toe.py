@@ -5,9 +5,6 @@ Ensure you step through this program in an IDE debugger to understand how the pr
 board = [[' ' for _ in range(3)] for _ in range(3)]
 
 def print_board():
-    """
-    Print board, each row separated by '-' and cell separated by '|'
-    """
     for row in board:
      
         print('|'.join(row))
@@ -15,13 +12,13 @@ def print_board():
 
 
 def is_win(player, board_snapshot=board):
-    """
-    Check rows, columns, and diagonals for win condition for a given player.
-    player to check ("X" or "O").
-    board_snapshot is the 3x3 list.
+    '''
+    Check rows, columns, and diagonals for win condition for a given player
 
-    returns True if win, False otherwise.
-    """
+    :param board: 3 x 3 board as a nested list
+    :param player: the player is 'X' or 'O'
+
+    '''
     for i in range(3):
         if all (cell == player for cell in board_snapshot[i]):  # Rows
             return True
@@ -34,20 +31,14 @@ def is_win(player, board_snapshot=board):
 def tally_wins(results):
     # Leveraging the fact that in Python: True = 1 and False = 0 
     # we can use sum() to count the number of wins by counting all Trues and Falses
-    """
-    count the number of wins during the game.
-    sum() count the number of True(win).
-    return the list of results (total number of wins).
-    """
     return sum(results)
 
 
 def main():
     """
-    main game loop function
-    switch turns between player X and O.
-    input row and column from each player and check the move.
-    check for a win after each move and show the result.
+    tic tac toe game loop
+    This function initialise the board and check player moves and input user info, check for wins
+    then display the result.
     """
     current_player = 'X'
     moves = 0

@@ -8,6 +8,9 @@ Welcome to tic_tac_toe's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Contents:　
+    tic_tac_toe
+    tac_tac_bug_toe
+    example
 
    modules
