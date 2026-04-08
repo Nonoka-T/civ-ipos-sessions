@@ -3,7 +3,7 @@ name: Python Tests with Coverage
 on:
   push:
     branches:
-      - main
+      - 2026S1
 
 jobs:
   test:
